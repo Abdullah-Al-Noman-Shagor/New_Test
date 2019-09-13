@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Age Calculator :</h2>
+<form>
+	Input Number ( in days ) : <input type="text" id="id1" name="first" value=""><br><br>
+	<button type="button" onclick="age_calculator()">Convert</button>
+	<b><p id="msg"></p></b>
+	<script type="text/javascript">
+		function age_calculator()
+		{
+			var num1,day,temp_month,month,temp_year,year,remainder;
+			input= Number(document.getElementById("id1").value);
+			num1= parseInt(input,10);
+			temp_year = (num1 / 365);
+			year = parseInt(temp_year,10);
+			remainder = num1 % 365;
+			if(remainder >=30)
+			{
+				temp_month = remainder / 30;
+				month = parseInt(temp_month,10);
+				day = remainder % 30;
+				document.getElementById("msg").innerHTML = year + " year " + month + " month and " + day + " day";
+
+			}
+			else
+			{
+				day = remainder;
+				document.getElementById("msg").innerHTML = year + " year and "  + day + " day";
+
+			}
+			
+		
+
+		}
+	</script>
+
+</form>
+</body>
+</html>

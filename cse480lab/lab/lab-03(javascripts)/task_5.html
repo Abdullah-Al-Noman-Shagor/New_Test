@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Convert to Hours and Minutes :</h2>
+<form>
+	Input Number : <input type="text" id="id1" name="first" value=""><br><br>
+	<button type="button" onclick="convert()">Convert</button>
+	<b><p id="msg"></p></b>
+	<script type="text/javascript">
+		function convert()
+		{
+			var num1,hour_temp,conv_hour,minute;
+			input= Number(document.getElementById("id1").value);
+			num1= parseInt(input,10);
+			hour_temp = (num1 / 60);
+			conv_hour = parseInt(hour_temp,10);
+			minute = num1 % 60;
+			if(conv_hour >1)
+			{
+					if(minute > 1)
+					{
+							document.getElementById("msg").innerHTML = conv_hour + " hours & " + minute + " minutes";
+					}
+					else
+					{
+						document.getElementById("msg").innerHTML = conv_hour + " hours & " + minute + " minute";
+					}
+			}
+			else
+			{
+				if(minute > 1)
+					{
+							document.getElementById("msg").innerHTML = conv_hour + " hour & " + minute + " minutes";
+					}
+					else
+					{
+						document.getElementById("msg").innerHTML = conv_hour + " hour & " + minute + " minute";
+					}
+			} 
+
+		}
+	</script>
+
+</form>
+</body>
+</html>

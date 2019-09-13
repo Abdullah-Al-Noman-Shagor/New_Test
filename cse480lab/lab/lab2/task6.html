@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		
+		input{
+			text-align: right;
+		}
+	</style>
+	
+</head>
+<body>
+<form >
+	Name: <input type="text" name="Name"> <br><br>
+	Address: <input type="text" name="Address"><br><br>
+	City: <input type="text" name="City"><br><br>
+	State: <input type="text" name="State"><br><br>
+	Zip: <input type="text" name="Zip"><br><br>
+	Magazine: <select name="magazine">
+		<option value="newsweek">Newsweek</option>
+		<option value="monthly">Monthly</option>
+		<option value="yearly">Yearly</option>
+	</select>
+	<br><br>
+	Subscription: 
+	<input type="radio" name="subscription" value="1 year" checked>1 year
+	<input type="radio" name="subscription" value="2 year">2 year
+	<br><br>
+	Additional Comments:<br>
+	<textarea name="comments" rows="10" cols="50"></textarea><br>
+	<button type="button">Send Your Order</button>
+</form>
+</body>
+</html>
